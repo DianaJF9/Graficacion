@@ -1,19 +1,46 @@
-#canvas1{
+/* canvas responsivo */
+#canvas1 {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 600px;
-    height: 600px;
+    width: 90vw;
+    max-width: 600px;
+    height: 90vw;
+    max-height: 600px;
 }
-.controles{
+
+/* contenedor de controles */
+.controles {
     position: absolute;
     z-index: 10;
-    top: 30px;
+    top: 20px;
     left: 50%;
     transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
 }
-.controles,select,option{
-    font-size: 25px;
+
+/* estilos del menú desplegable */
+.controles label {
+    display: block;
+    font-size: 5vw;
+    max-font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.controles select {
+    font-size: 5vw;
+    max-font-size: 24px;
+    padding: 5px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Ajustes para pantallas más grandes */
+@media (min-width: 768px) {
+
+    .controles label,
+    .controles select {
+        font-size: 20px;
+    }
 }
